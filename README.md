@@ -2,7 +2,7 @@
 **django-esay-accounts**
 
 
- > django-esay-accounts is a simple Django app for accounts handle login & SingUp & logout and User Profil tow
+ `django-esay-accounts is a simple Django app for accounts handle login & SingUp & logout and User Profil tow`
 
 to install the application
 
