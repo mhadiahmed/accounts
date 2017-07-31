@@ -6,7 +6,10 @@
 
 to install the application
 
-pip install django-esay-accounts
+
+>pip install django-esay-accounts
+
+
 
 Quick start
 -----------
