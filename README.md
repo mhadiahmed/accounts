@@ -1,32 +1,38 @@
-=====
-django-esay-accounts
-=====
 
-django-esay-accounts is a simple Django app for accounts handle login & SingUp & logout and User Profil tow
+**django-esay-accounts**
 
 
+ > django-esay-accounts is a simple Django app for accounts handle login & SingUp & logout and User Profil tow
+
+to install the application
+
+pip install django-esay-accounts
 
 Quick start
 -----------
 
 1. Add "django-esay-accounts" to your INSTALLED_APPS setting like this::
 
-    INSTALLED_APPS = [
-        ...
-    'crispy_forms',
-    'account',
-    ]
+>    INSTALLED_APPS = [
+>        ...
+>    'crispy_forms',
+>    'account',
+>    ]
+  
+  
   add this line for the crispy_froms
 
-	CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+
+>	CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 2. Include the accounts URLconf in your project urls.py like this::
 
-    url(r'^', include('account.urls')),
+>   url(r'^', include('account.urls')),
     
    add this line to the main urls conf tow
-   from django.conf.urls.static import static 
-   from django.conf import settings
+>   from django.conf.urls.static import static 
+>   from django.conf import settings
 
  
 
