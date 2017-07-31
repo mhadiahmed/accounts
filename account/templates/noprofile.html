@@ -1,0 +1,17 @@
+{%extends 'singup.html'%}
+{% load crispy_forms_tags  %}
+{%block header%}
+<head>
+
+</head>
+{%endblock header%}
+{% block title %}See you!{% endblock %}
+
+<div class="container">
+{% block content %}
+  <h2>You do not have permission to see this.</h2>
+  <h2>please login or singUp with us to  view this</h2>
+  <p class=""><a href="{% url 'singup' %}">SingUp</a> or <a href="{% url 'login' %}">Login</a> again.</p>
+ </div>
+ </div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{%extends 'singup.html'%}
+
+{% block content %}
+{%if not request.user.is_authenticated or not request.user.id == 1 %}
+{% if messages %}
+<div class="alert alert-success" role="alert">
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+</div>
+{% endif %}
+
+<a class="btn btn-default" href="{% url 'logout'%}" style="float:right;margin-bottom:10px"><i class="fa fa-user-times"> logout</i></a>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 col-md-3">
+        {% if user.userprofile.image %}
+            <img src="{{user.userprofile.image.url}}"
+            alt="" class="img-rounded img-responsive" />{% endif %}
+        </div>
+        <div class="col-sm-5 col-md-5">
+            <blockquote>
+                <p>{{user.get_full_name}}</p> <small><cite title="Source Title">{{user.userprofile.city}}<i class="glyphicon glyphicon-map-marker"></i></cite></small>
+            </blockquote>
+            <p> <i class="glyphicon glyphicon-envelope"></i> {{user.email}}
+                <br
+                /> <i class="glyphicon glyphicon-globe"></i> {{user.userprofile.company}}
+                <br><i class="glyphicon glyphicon-phone"></i> {{user.userprofile.phone}}
+                <br /> <i class="glyphicon glyphicon-gift"></i> {{user.date_joined}}</p>
+                <hr>
+                <br> <a class="btn btn-primary" href="{% url 'custmize'%}"><i class="glyphicon glyphicon-edit"></i> custmize Profile</a>
+                <a class="btn btn-default" href="{% url 'edit_profile'%}"><i class="glyphicon glyphicon-edit"></i> edit user info</a>
+        </div>
+    </div>
+</div>
+{%endif%}
+
+
+</div>
+</div>
+
+{% endblock content %}

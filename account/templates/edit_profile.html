@@ -1,0 +1,25 @@
+{%extends 'singup.html'%}}
+{% load crispy_forms_tags  %}
+
+
+
+{% block content %}
+<section id="login" >
+    <div class="container">
+    	<div class="row">
+    	    <div class="col-xs-12">
+        	    <div class="form-wrap">
+
+                      <h2>{{title}}</h2>
+
+                      <form method="post" action =".">
+                        {% csrf_token %}
+                        {{ forms|crispy }}
+                        <button type="submit" class = "btn btn-primary"><i class="fa fa-user-o">  {{title}}</i></button>
+                      </form><br>
+        	    </div>
+    		</div> <!-- /.col-xs-12 -->
+    	</div> <!-- /.row -->
+    </div> <!-- /.container -->
+</section>
+{% endblock content %}

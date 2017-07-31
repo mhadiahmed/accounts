@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+recursive-include account/static *
+recursive-include account/media *
+recursive-include account/templates *
+recursive-include docs *
