@@ -15,7 +15,11 @@ Quick start
 
 >    INSTALLED_APPS = [
 >        ...
+
+
 >    'crispy_forms',
+
+
 >    'account',
 >    ]
   
@@ -32,6 +36,8 @@ Quick start
     
    add this line to the main urls conf tow
 >   from django.conf.urls.static import static 
+
+
 >   from django.conf import settings
 
  
