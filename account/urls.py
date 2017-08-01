@@ -3,6 +3,10 @@ from django.contrib.auth.views import (
 	password_reset,password_reset_done,
 	password_reset_confirm,password_reset_complete)
 from account import views
+from django.conf.urls.static import static 
+from django.conf import settings
+
+
 urlpatterns = [
     url(r'^login/$',views.login_view,name='login'),
     url(r'^accounts/login/$',views.login_view,name='login'),
@@ -18,3 +22,7 @@ urlpatterns = [
 	url(r'^password-reset/$',password_reset,{'template_name':'password/password_reset.html'} , name='password-reset'),
 	url(r'^password_reset/complete/$',password_reset_complete,{'template_name':'password/password_complete.html'} , name='password_reset_complete'),
     ]
+
+if settings.DEBUG:
+	urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+	urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
