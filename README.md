@@ -2,6 +2,12 @@
 **django-esay-account**
 
 
+![django logo](http://djangostars.com/blog/content/images/2017/03/Screenshot_812123.png)
+
+
+[see it on pypi  ](https://pypi.python.org/pypi?:action=display&name=django-esay-account&version=0.0.2)
+
+
  `django-esay-account is a simple Django app for accounts handle login & SingUp & logout and User Profil tow`
 
 to install the application
