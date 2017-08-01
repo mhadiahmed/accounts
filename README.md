@@ -44,7 +44,7 @@ Quick start
 
  >EMAIL_BACKEND ='django.core.mail.backends.console.EmailBackend' 
 	
- >DEFAULT_FROM_EMAIL = 'example@gmail.com'
+ >DEFAULT_FROM_EMAIL = 'example@example.com'
 	
  >EMAIL_HOST_USER = ''
 	
