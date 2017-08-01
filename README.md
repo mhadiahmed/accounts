@@ -41,7 +41,8 @@ Quick start
     
 3. add this 6 lines at the bottom in the settings files to handel the password reset.
 
-	>EMAIL_BACKEND ='django.core.mail.backends.console.EmailBackend' 
+
+ >EMAIL_BACKEND ='django.core.mail.backends.console.EmailBackend' 
 	
  >DEFAULT_FROM_EMAIL = 'example@gmail.com'
 	
