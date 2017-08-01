@@ -54,10 +54,13 @@ Quick start
 	
  >EMAIL_PORT = 1025
 
+4. and this line for define the media path
 
-4. Run `python manage.py migrate` to create the django-esay-account models.
+>MEDIA_URL = '/media/'
 
-5. Start the development server and visit http://127.0.0.1:8000/admin/
+5. Run `python manage.py migrate` to create the django-esay-account models.
+
+6. Start the development server and visit http://127.0.0.1:8000/admin/
    to create a django-esay-account (you'll need the Admin app enabled).
 
-6. Visit http://127.0.0.1:8000/login/ to test the  django-esay-account.
+7. Visit http://127.0.0.1:8000/login/ to test the  django-esay-account.
