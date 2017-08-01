@@ -17,6 +17,8 @@ to install the application
 
 >pip install django-esay-account
 
+![install](https://github.com/mhadiahmed/accounts/blob/master/docs/pip_install.gif)
+
 
 
 Quick start
@@ -39,12 +41,19 @@ Quick start
 
 
 
->	CRISPY_TEMPLATE_PACK = 'bootstrap3'
+>CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+
+![install](https://github.com/mhadiahmed/accounts/blob/master/docs/setting1.gif)
+
 
 2. Include the accounts URLconf in your project urls.py like this::
 
 >   url(r'^', include('account.urls')),
-    
+
+
+![install](https://github.com/mhadiahmed/accounts/blob/master/docs/seturls.gif)
+
 3. add this 6 lines at the bottom in the settings files to handel the password reset.
 
 
@@ -60,13 +69,37 @@ Quick start
 	
  >EMAIL_PORT = 1025
 
-4. and this line for define the media path
+* and this line for define the media path
 
 >MEDIA_URL = '/media/'
 
+
+
+![install](https://github.com/mhadiahmed/accounts/blob/master/docs/settings2.gif)
+
+
+
 5. Run `python manage.py migrate` to create the django-esay-account models.
 
-6. Start the development server and visit http://127.0.0.1:8000/admin/
-   to create a django-esay-account (you'll need the Admin app enabled).
 
-7. Visit http://127.0.0.1:8000/login/ to test the  django-esay-account.
+
+![install](https://github.com/mhadiahmed/accounts/blob/master/docs/migrate.gif)
+
+6. create super user 
+
+
+
+![install](https://github.com/mhadiahmed/accounts/blob/master/docs/superuser.gif)
+
+7. Start the development server and visit http://127.0.0.1:8000/admin/
+   to create a django-esay-account (you'll need the Admin app enabled).
+   
+   
+![install](https://github.com/mhadiahmed/accounts/blob/master/docs/runserver.gif)
+
+
+8. Visit http://127.0.0.1:8000/login/ to test the  django-esay-account.
+
+
+
+![install](https://github.com/mhadiahmed/accounts/blob/master/docs/login.gif)
