@@ -25,16 +25,14 @@ def login_view(request):
 		if next:
 			redirect(next)
 		return redirect("profile")
-	return render(request,"login.html",{"form":form,"title":title})
 
-def register_view(request):
 	next = request.GET.get("next")
-	title = "SingUp"
-	form = UserRigester(request.POST or None)
-	if form.is_valid():
-		user = form.save(commit=False)
-		username = form.cleaned_data.get("username")
-		password = form.cleaned_data.get("password")
+	title2 = "SingUp"
+	form2 = UserRigester(request.POST or None)
+	if form2.is_valid():
+		user = form2.save(commit=False)
+		username = form2.cleaned_data.get("username")
+		password = form2.cleaned_data.get("password")
 		user.set_password(password)
 		user.is_staff=True
 		user.save()
@@ -43,7 +41,9 @@ def register_view(request):
 		if next:
 			redirect(next)
 		return redirect("profile")
-	return render(request,"singup.html",{"title":title,"form":form})
+	return render(request,"login.html",{"form":form,"form2":form2,"title":title,"title2":title2})
+
+
 
 
 def logout_view(request):

@@ -25,8 +25,12 @@ class UserProfile(forms.ModelForm):
 User = get_user_model()
 
 class UserLoginForm(forms.Form):
-	username = forms.CharField()
-	password = forms.CharField(widget=forms.PasswordInput)
+	username = forms.CharField(widget=forms.TextInput(
+		attrs={'id':'user'}
+		))
+	password = forms.CharField(widget=forms.PasswordInput(
+		attrs={'id':'passlog'}
+		))
 
 
 	def clean(self,*args,**kwargs):
@@ -66,8 +70,10 @@ class UserRigester(forms.ModelForm):
 		]
 
 
+
 	def clean_password2(self):
 		password = self.cleaned_data.get("password")
+		
 		password2 = self.cleaned_data.get("password2")
 		if password != password2:
 			raise forms.ValidationError("password must match.")

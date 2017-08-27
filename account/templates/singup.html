@@ -19,7 +19,7 @@
 
                       <h2>{{title}}</h2>
 
-                      <form method="post" action =".">
+                      <form method="post" action ="." id="mian-form">
                         {% csrf_token %}
                         {{ form|crispy }}
                         <button type="submit" class = "btn btn-primary"><i class="fa fa-user-o">  {{title}}</i></button>
@@ -27,9 +27,14 @@
                          <p style="margin-top:10px;text-align">have account? <span style="margin-top:10px;text-align: center;"><a href="{%url 'login'%}">Login</a></span></p>
                       </form><br>
         	    </div>
+                {# // <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script> #}
+
     		</div> <!-- /.col-xs-12 -->
+
     	</div> <!-- /.row -->
     </div> <!-- /.container -->
 </section>
 {% endblock content %}
+<script type="text/javascript" src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/plugin.js' %}"></script>
 </html>

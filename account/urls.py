@@ -11,7 +11,6 @@ urlpatterns = [
     url(r'^login/$',views.login_view,name='login'),
     url(r'^accounts/login/$',views.login_view,name='login'),
     url(r'^logout/$',views.logout_view,name='logout'),
-    url(r'^singup/$',views.register_view,name='singup'),
     url(r'^custmize/$',views.edit_all,name='custmize'),
     url(r'^profile/$',views.profile , name='profile'),
 	url(r'^profile/(?P<pk>\d+)/$',views.profile , name='profile_pk'),
